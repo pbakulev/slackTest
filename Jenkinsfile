@@ -9,6 +9,7 @@ pipeline{
 
             steps {
                 echo "Success"
+				currentBuild.currentResult = "ABORTED"
             }
 
         }
