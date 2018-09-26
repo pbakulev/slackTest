@@ -10,7 +10,7 @@ pipeline{
             steps {
                 echo "Success"
 				script{
-					currentBuild.currentResult = "ABORTED"
+					currentBuild.result = "ABORTED"
 				}
 				
             }
