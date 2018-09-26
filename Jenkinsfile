@@ -9,7 +9,6 @@ pipeline{
 
             steps {
                 echo "Success"
-				error 'Error'
 				
             }
 
@@ -19,7 +18,7 @@ pipeline{
     }
 	post {
 		always{
-			slack('#jenkins_test')
+			slack('#jenkins_test', 'y')
 		}
 		
 	}
