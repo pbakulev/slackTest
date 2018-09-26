@@ -9,9 +9,7 @@ pipeline{
 
             steps {
                 echo "Success"
-				script{
-					currentBuild.result = "ABORTED"
-				}
+				error 'Error'
 				
             }
 
