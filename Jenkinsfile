@@ -8,7 +8,8 @@ pipeline{
         stage('Send slack correct notification as script'){
 
             steps {
-                echo "Success"
+                echo "Failure"
+		error 'Some error'
 				
             }
 
