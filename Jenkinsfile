@@ -1,4 +1,4 @@
-@Library('jenkins-shared-libraries@dev_test') _
+@Library('jenkins-shared-libraries@v1.1') _
 
 pipeline{
 
@@ -18,7 +18,8 @@ pipeline{
     }
 	post {
 		always{
-			slack('#jenkins_test', 'y')
+			slack channel:'#jenkins_test', allure: 'y'
+			slack channel:'#jenkins_test', allure: 'no'
 		}
 		
 	}
