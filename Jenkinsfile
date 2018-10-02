@@ -9,7 +9,7 @@ pipeline{
 
             steps {
                 echo "Success"
-	        echo "${imageName}"
+	        echo "${imageName()}"
 		echo imageName()
 		echo imageName		
             }
