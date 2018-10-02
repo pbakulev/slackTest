@@ -1,4 +1,4 @@
-@Library('jenkins-shared-libraries@v1.1') _
+@Library('jenkins-shared-libraries@test') _
 
 pipeline{
 
@@ -8,9 +8,10 @@ pipeline{
         stage('Send slack correct notification as script'){
 
             steps {
-                echo "Failure"
-		error 'Some error'
-				
+                echo "Success"
+	        echo "${imageName}"
+		echo imageName()
+		echo imageName		
             }
 
         }
