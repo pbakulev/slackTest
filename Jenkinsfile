@@ -12,6 +12,7 @@ pipeline{
 	        echo "${imageName()}"
 		echo imageName()
 		echo imageName		
+		    
             }
 
         }
