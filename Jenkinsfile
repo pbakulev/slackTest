@@ -11,7 +11,7 @@ pipeline{
                 echo "Success"
 	        echo "${imageName()}"
 		echo imageName()
-		//echo imageName		
+		echo imageName		
 		    
             }
 
