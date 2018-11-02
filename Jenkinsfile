@@ -9,7 +9,7 @@ pipeline{
 
             steps {
                 echo "Success"
-		    
+	    	echo "${env.BRANCH_NAME}"
             }
 
         }
