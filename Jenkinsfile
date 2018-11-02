@@ -8,10 +8,7 @@ pipeline{
         stage('Send slack correct notification as script'){
 
             steps {
-                echo "Success"
-	        echo "${imageName()}"
-		echo imageName()
-		echo imageName		
+                echo "Success"'	
 		    
             }
 
