@@ -9,7 +9,7 @@ pipeline{
 
             steps {
                 echo "Success"
-	    	echo "${env.JOB_NAME}"
+	    	echo "${env.BRANCH_NAME}"
             }
 
         }
@@ -20,7 +20,7 @@ pipeline{
 	post {
 		always{
 			script{
-				env.JOB_NAME == 'master' ?  echo 'yes' : echo 'no'
+				env.BRANCH_NAME == 'master' ?  echo('yes') : echo('no')
 			}
 		}
 		
