@@ -22,7 +22,9 @@ pipeline{
     }
 	post {
 		always{
-			env.BRANCH_NAME == master? slack(channel:'#jenkins_test', allure: 'y') : slack(channel:'#jenkins_test', allure: 'no')
+			script{
+				env.BRANCH_NAME == master? slack(channel:'#jenkins_test', allure: 'y') : slack(channel:'#jenkins_test', allure: 'no')
+			}
 		}
 		
 	}
