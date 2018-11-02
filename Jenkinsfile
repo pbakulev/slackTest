@@ -1,4 +1,4 @@
-@Library('jenkins-shared-libraries@test') _
+@Library('jenkins-shared-libraries@v1.4') _
 
 pipeline{
 
@@ -21,8 +21,7 @@ pipeline{
     }
 	post {
 		always{
-			slack channel:'#jenkins_test', allure: 'y'
-			slack channel:'#jenkins_test', allure: 'no'
+			env.BRANCH_NAME == master? slack(channel:'#jenkins_test', allure: 'y') : slack(channel:'#jenkins_test', allure: 'no')
 		}
 		
 	}
