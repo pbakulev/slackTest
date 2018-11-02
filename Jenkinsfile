@@ -8,7 +8,7 @@ pipeline{
         stage('Send slack correct notification as script'){
 
             steps {
-                echo "Success"'	
+                echo "Success"
 		    
             }
 
@@ -20,7 +20,7 @@ pipeline{
 	post {
 		always{
 			script{
-				env.BRANCH_NAME == 'master'? slack(channel:'#jenkins_test', allure: 'y') : slack(channel:'#jenkins_test', allure: 'no')
+				env.BRANCH_NAME == 'master'? echo 'yes' : echo 'no'
 			}
 		}
 		
