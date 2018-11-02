@@ -20,7 +20,7 @@ pipeline{
 	post {
 		always{
 			script{
-				env.BRANCH_NAME == 'master'? echo 'yes' : echo 'no'
+				env.BRANCH_NAME == 'master' ?  echo 'yes' : echo 'no'
 			}
 		}
 		
