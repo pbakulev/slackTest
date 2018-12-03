@@ -5,11 +5,10 @@ pipeline{
     agent { node { label 'master' } }
     stages {
 
-        stage('Send slack correct notification as script'){
+        stage('Show env'){
 
             steps {
-                echo "Success"
-	    	echo "${env.BRANCH_NAME}"
+                echo sh(returnStdout: true, script: 'env')
             }
 
         }
@@ -17,11 +16,6 @@ pipeline{
 
 	    
     }
-	post {
-		always{
-				env.BRANCH_NAME == 'master' ?  echo('yes') : echo('no')
-		}
-		
-	}
+	
 
 }
