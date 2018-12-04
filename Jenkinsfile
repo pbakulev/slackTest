@@ -1,4 +1,4 @@
-@Library('jenkins-shared-libraries@v1.4') _
+@Library('jenkins-shared-libraries@dev_test') _
 
 pipeline{
 
@@ -8,7 +8,7 @@ pipeline{
         stage('Show env'){
 
             steps {
-                echo sh(returnStdout: true, script: 'env')
+		    echo "${commitId()}"
             }
 
         }
