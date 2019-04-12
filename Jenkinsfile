@@ -1,19 +1,22 @@
-@Library('jenkins-shared-libraries@dev_test') _
+@Library('jenkins-shared-libraries@abort-previous-builds') _
 
 pipeline{
 
     agent { node { label 'master' } }
     stages {
-
-        stage('Show env'){
+	stage(''){
+		steps {
+			abortPreviousBuilds()
+		}
+	}
+        stage('Timeout'){
 
             steps {
-		    echo "${commitId()}"
+		    sleep 30s
             }
 
         }
 	    
-    }
-	
+    }	
 
 }
