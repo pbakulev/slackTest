@@ -12,7 +12,7 @@ pipeline{
         stage('Timeout'){
 
             steps {
-		    sleep 30s
+		    sh 'sleep 30s'
             }
 
         }
