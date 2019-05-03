@@ -7,12 +7,12 @@ pipeline{
             
                 script{
                     jobDsl scriptText:
-                    """multibranchPipelineJob('Example') {
-                        configure { project ->
-                            ( project / 'authToken' ).setValue('value')
-                        }
-                        """
-                    }
+                    """ multibranchPipelineJob('Example') {
+                            configure { project ->
+                                ( project / 'authToken' ).setValue('value')
+                            }
+                         }
+                    """
                 }
             
             }
