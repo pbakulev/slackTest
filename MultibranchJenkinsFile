@@ -6,13 +6,7 @@ pipeline{
             steps{
             
                 script{
-                    jobDsl scriptText:
-                    """ multibranchPipelineJob('Example') {
-                            configure { project ->
-                                ( project / 'authToken' ).setValue('value')
-                            }
-                         }
-                    """
+                    jobDsl targets: 'multibranchJob.groovy'
                 }
             
             }
