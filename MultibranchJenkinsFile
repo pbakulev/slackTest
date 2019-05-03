@@ -1,8 +1,16 @@
-multibranchPipelineJob('Example') {
-    configure { project ->
-        ( project / 'authToken' ).setValue('value')
-    }    
+pipeline{
+    agent any
+    stages {
     
+        stage('Stage'){
+            multibranchPipelineJob('Example') {
+                configure { project ->
+                    ( project / 'authToken' ).setValue('value')
+                }
+            }
+        }
+    
+    }
     
 }
 
