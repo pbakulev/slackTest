@@ -3,11 +3,18 @@ pipeline{
     stages {
     
         stage('Stage'){
-            multibranchPipelineJob('Example') {
-                configure { project ->
-                    ( project / 'authToken' ).setValue('value')
+            steps{
+            
+                script{
+                    multibranchPipelineJob('Example') {
+                        configure { project ->
+                            ( project / 'authToken' ).setValue('value')
+                        }
+                    }
                 }
+            
             }
+            
         }
     
     }
