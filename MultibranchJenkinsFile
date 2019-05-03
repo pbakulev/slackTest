@@ -3,5 +3,6 @@ multibranchPipelineJob('Example') {
         ( project / 'authToken' ).setValue('value')
     }    
     
+    
 }
 
